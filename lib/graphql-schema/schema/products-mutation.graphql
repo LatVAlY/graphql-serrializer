@@ -1,0 +1,16 @@
+mutation GetGeoProduct ($searchModelInput: SearchModelInput! ) {
+    getGeoProducts(
+        searchModelInput:$searchModelInput
+    ) {
+        facetDistribution
+        hits {
+            filters {
+                type
+                id
+                categoryId
+                name
+                values
+            }
+        }
+    }
+}
